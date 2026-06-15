@@ -1,17 +1,17 @@
 /**
  * Vérifie la cohérence des données dashboard ROC (/dashboard).
  */
-import { AGENCES } from '../src/lib/agences.ts'
-import { buildParGranulaireReseau } from '../src/lib/credit-dossiers-stats.ts'
-import { MOCK_ROC_HOME } from '../src/lib/mockMicrofinance.ts'
-import { countDossiersBloques } from '../src/lib/mock-risque-registry.ts'
-import { getMoisCourant } from '../src/lib/mock-time-series.ts'
+import { AGENCES } from '../src/lib/agences'
+import { buildParGranulaireReseau } from '../src/lib/credit-dossiers-stats'
+import { MOCK_ROC_HOME } from '../src/lib/mockMicrofinance'
+import { countDossiersBloques } from '../src/lib/mock-risque-registry'
+import { getMoisCourant } from '../src/lib/mock-time-series'
 import {
   assertRocParSeriesCoherent,
   buildRocEvolutionPar30,
   verifierCoherenceRocDashboard,
-} from '../src/lib/roc-dashboard-hub.ts'
-import { ROC_SYNTHESE_COMPLEMENT } from '../src/lib/roc-synthese-ia.ts'
+} from '../src/lib/roc-dashboard-hub'
+import { ROC_SYNTHESE_COMPLEMENT } from '../src/lib/roc-synthese-ia'
 
 const m = getMoisCourant()
 const par = buildParGranulaireReseau()

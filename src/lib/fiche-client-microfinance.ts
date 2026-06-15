@@ -473,8 +473,8 @@ function normalizeCreditsDetail(
 function normalizeFicheClient(
   clientId: string,
   base: ClientRisqueDetail,
-  fiche: Omit<FicheClientMicrofinance, keyof ClientRisqueDetail> & Partial<ClientRisqueDetail>,
-): Omit<FicheClientMicrofinance, keyof ClientRisqueDetail> {
+  fiche: FicheEnrichieInput & Partial<ClientRisqueDetail>,
+): FicheEnrichieInput {
   const hasCredit = base.credits.length > 0
   const identite = fiche.identite?.date_naissance && fiche.identite.date_naissance !== '—'
     ? {
@@ -609,6 +609,8 @@ export interface IndicateurRisque {
   explication_score_cbi: ScoreExplication
   explication_pd: PdExplication
 }
+
+type IndicateurRisqueSeed = Omit<IndicateurRisque, 'explication_score_ia' | 'explication_score_cbi' | 'explication_pd'>
 
 function clampScore(n: number, min = 5, max = 100): number {
   return Math.max(min, Math.min(max, Math.round(n)))
@@ -932,7 +934,7 @@ export function buildExplicationPD(
 function enrichIndicateursRisque(
   base: ClientRisqueDetail,
   activite: ActiviteEconomique,
-  ind: Omit<IndicateurRisque, 'explication_score_ia' | 'explication_score_cbi' | 'explication_pd'>,
+  ind: IndicateurRisqueSeed,
 ): IndicateurRisque {
   return {
     ...ind,
@@ -977,6 +979,12 @@ export interface FicheClientMicrofinance extends ClientRisqueDetail {
     comite_requis: boolean
   }
 }
+
+type FicheEnrichieOverride = Omit<FicheClientMicrofinance, keyof ClientRisqueDetail | 'indicateurs_risque'> & {
+  indicateurs_risque: IndicateurRisqueSeed
+}
+
+type FicheEnrichieInput = FicheEnrichieOverride | Omit<FicheClientMicrofinance, keyof ClientRisqueDetail>
 
 function produitEpargneLabel(type: TypeCompteEpargne): string {
   const labels: Record<TypeCompteEpargne, string> = {
@@ -1071,11 +1079,11 @@ function ensureComptesEpargne(
   return comptes.length > 0 ? comptes : buildComptesEpargneClient(clientId, base)
 }
 
-const FICHES_ENRICHIES: Partial<Record<string, Omit<FicheClientMicrofinance, keyof ClientRisqueDetail>>> = {
+const FICHES_ENRICHIES: Partial<Record<string, FicheEnrichieOverride>> = {
   'CL-1042': buildKomlanAttivor(),
 }
 
-function buildKomlanAttivor(): Omit<FicheClientMicrofinance, keyof ClientRisqueDetail> {
+function buildKomlanAttivor(): FicheEnrichieOverride {
   const echeancier: EcheanceCredit[] = [
     { numero: 1, date_echeance: '15/09/2024', capital_fcfa: 70_833, interet_fcfa: 23_611, total_fcfa: 94_444, statut: 'PAYE', date_paiement: '14/09/2024', montant_paye_fcfa: 94_444, solde_apres_fcfa: 779_167 },
     { numero: 2, date_echeance: '15/10/2024', capital_fcfa: 70_833, interet_fcfa: 23_611, total_fcfa: 94_444, statut: 'PAYE', date_paiement: '15/10/2024', montant_paye_fcfa: 94_444, solde_apres_fcfa: 708_334 },

@@ -85,7 +85,7 @@ export function getVisitesMoisCoords(visites: VisiteTerrain[]): Array<{
   lat: number
   lng: number
   client: string
-  type: string
+  type: VisiteTerrain['type']
   date: string
   heure: string
   resultat: VisiteTerrain['resultat']

@@ -136,6 +136,12 @@ export function buildRapportIARa(agenceId = 'AG-001'): RapportIA {
       destinataire: "Responsable d'Agence",
       synthese_executive: `Données agence ${ag.nom_court} indisponibles.`,
       chiffres_cles: [],
+      points_forts: [],
+      points_attention: [],
+      recommandations: [],
+      previsions_30j: [],
+      alertes_immediates: [],
+      comparaison_mois_precedent: [],
       signature_ia: 'Prospera AI · RA',
     }
   }
@@ -202,7 +208,7 @@ export function buildRapportIARa(agenceId = 'AG-001'): RapportIA {
       ...detail.alertes.map(a => ({
         titre: a.type,
         detail: a.detail,
-        severite: (a.urgence === 'HAUTE' ? 'HAUTE' : a.urgence === 'CRITIQUE' ? 'CRITIQUE' : 'MODEREE') as 'CRITIQUE' | 'HAUTE' | 'MODEREE',
+        severite: (a.urgence === 'HAUTE' ? 'HAUTE' : 'MODEREE') as 'CRITIQUE' | 'HAUTE' | 'MODEREE',
       })),
       ...(bloques.length > 0
         ? [{

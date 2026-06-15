@@ -1,6 +1,6 @@
-import { buildEcheancierCoherent, countImpayesEcheancier, echuesDansContrat } from '../src/lib/credit-echeancier-builder.ts'
-import { getFicheClientMicrofinance } from '../src/lib/fiche-client-microfinance.ts'
-import { REGISTRE_CLIENTS_RISQUE } from '../src/lib/mock-risque-registry.ts'
+import { buildEcheancierCoherent, countImpayesEcheancier, echuesDansContrat } from '../src/lib/credit-echeancier-builder'
+import { getFicheClientMicrofinance } from '../src/lib/fiche-client-microfinance'
+import { REGISTRE_CLIENTS_RISQUE } from '../src/lib/mock-risque-registry'
 
 const extra = ['EMP-001-0001', 'CL-CO-VFL-004']
 const ids = [...REGISTRE_CLIENTS_RISQUE.map(c => c.id), ...extra]
