@@ -1,0 +1,358 @@
+{
+  "DC": [
+    {
+      "slug": "dashboard",
+      "file": "img/personas/dc/01-dashboard.png",
+      "url": "http://localhost:3002/dashboard"
+    },
+    {
+      "slug": "pilotage-financier",
+      "file": "img/personas/dc/02-pilotage-financier.png",
+      "url": "http://localhost:3002/pilotage-financier"
+    },
+    {
+      "slug": "tournees",
+      "file": "img/personas/dc/03-tournees.png",
+      "url": "http://localhost:3002/tournees"
+    },
+    {
+      "slug": "commandes",
+      "file": "img/personas/dc/04-commandes.png",
+      "url": "http://localhost:3002/commandes"
+    },
+    {
+      "slug": "stock-stock",
+      "file": "img/personas/dc/05-stock-stock.png",
+      "url": "http://localhost:3002/stock?tab=stock"
+    },
+    {
+      "slug": "stock-transferts",
+      "file": "img/personas/dc/06-stock-transferts.png",
+      "url": "http://localhost:3002/stock?tab=transferts"
+    },
+    {
+      "slug": "stock-sante",
+      "file": "img/personas/dc/07-stock-sante.png",
+      "url": "http://localhost:3002/stock?tab=sante"
+    },
+    {
+      "slug": "stock-journal-auto",
+      "file": "img/personas/dc/08-stock-journal-auto.png",
+      "url": "http://localhost:3002/stock?tab=automatisation"
+    },
+    {
+      "slug": "stock-sorties",
+      "file": "img/personas/dc/09-stock-sorties.png",
+      "url": "http://localhost:3002/stock?tab=sorties"
+    },
+    {
+      "slug": "stock-catalogue",
+      "file": "img/personas/dc/10-stock-catalogue.png",
+      "url": "http://localhost:3002/stock?tab=catalogue"
+    },
+    {
+      "slug": "facturation-factures",
+      "file": "img/personas/dc/11-facturation-factures.png",
+      "url": "http://localhost:3002/facturation?tab=factures"
+    },
+    {
+      "slug": "facturation-proformas",
+      "file": "img/personas/dc/12-facturation-proformas.png",
+      "url": "http://localhost:3002/facturation?tab=proformas"
+    },
+    {
+      "slug": "relances-impayes",
+      "file": "img/personas/dc/13-relances-impayes.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-reappro",
+      "file": "img/personas/dc/14-relances-reappro.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-prospection",
+      "file": "img/personas/dc/15-relances-prospection.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-tous",
+      "file": "img/personas/dc/16-relances-tous.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "points-de-vente",
+      "file": "img/personas/dc/17-points-de-vente.png",
+      "url": "http://localhost:3002/points-de-vente"
+    },
+    {
+      "slug": "points-de-vente-detail",
+      "file": "img/personas/dc/18-points-de-vente-detail.png",
+      "url": "http://localhost:3002/points-de-vente/pdv-gen-308"
+    },
+    {
+      "slug": "prospection-territoires",
+      "file": "img/personas/dc/19-prospection-territoires.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-carnet",
+      "file": "img/personas/dc/20-prospection-carnet.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-survie",
+      "file": "img/personas/dc/21-prospection-survie.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-passation",
+      "file": "img/personas/dc/22-prospection-passation.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "commercial-terrain",
+      "file": "img/personas/dc/23-commercial-terrain.png",
+      "url": "http://localhost:3002/commercial"
+    },
+    {
+      "slug": "marketing",
+      "file": "img/personas/dc/24-marketing.png",
+      "url": "http://localhost:3002/marketing"
+    },
+    {
+      "slug": "social-calendrier",
+      "file": "img/personas/dc/25-social-calendrier.png",
+      "url": "http://localhost:3002/marketing/social"
+    },
+    {
+      "slug": "social-idees",
+      "file": "img/personas/dc/26-social-idees.png",
+      "url": "http://localhost:3002/marketing/social"
+    },
+    {
+      "slug": "social-inbox",
+      "file": "img/personas/dc/27-social-inbox.png",
+      "url": "http://localhost:3002/marketing/social"
+    },
+    {
+      "slug": "social-performance",
+      "file": "img/personas/dc/28-social-performance.png",
+      "url": "http://localhost:3002/marketing/social"
+    },
+    {
+      "slug": "social-journal",
+      "file": "img/personas/dc/29-social-journal.png",
+      "url": "http://localhost:3002/marketing/social"
+    },
+    {
+      "slug": "objectifs",
+      "file": "img/personas/dc/30-objectifs.png",
+      "url": "http://localhost:3002/objectifs"
+    },
+    {
+      "slug": "equipe-classement",
+      "file": "img/personas/dc/31-equipe-classement.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-comparatif",
+      "file": "img/personas/dc/32-equipe-comparatif.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-coaching",
+      "file": "img/personas/dc/33-equipe-coaching.png",
+      "url": "http://localhost:3002/equipe"
+    }
+  ],
+  "RESP_VENTES": [
+    {
+      "slug": "dashboard",
+      "file": "img/personas/resp_ventes/01-dashboard.png",
+      "url": "http://localhost:3002/dashboard"
+    },
+    {
+      "slug": "commandes",
+      "file": "img/personas/resp_ventes/02-commandes.png",
+      "url": "http://localhost:3002/commandes"
+    },
+    {
+      "slug": "stock-stock",
+      "file": "img/personas/resp_ventes/03-stock-stock.png",
+      "url": "http://localhost:3002/stock?tab=stock"
+    },
+    {
+      "slug": "stock-sorties",
+      "file": "img/personas/resp_ventes/04-stock-sorties.png",
+      "url": "http://localhost:3002/stock?tab=sorties"
+    },
+    {
+      "slug": "stock-catalogue",
+      "file": "img/personas/resp_ventes/05-stock-catalogue.png",
+      "url": "http://localhost:3002/stock?tab=catalogue"
+    },
+    {
+      "slug": "facturation-proformas",
+      "file": "img/personas/resp_ventes/06-facturation-proformas.png",
+      "url": "http://localhost:3002/facturation?tab=proformas"
+    },
+    {
+      "slug": "relances-impayes",
+      "file": "img/personas/resp_ventes/07-relances-impayes.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-reappro",
+      "file": "img/personas/resp_ventes/08-relances-reappro.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-prospection",
+      "file": "img/personas/resp_ventes/09-relances-prospection.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-tous",
+      "file": "img/personas/resp_ventes/10-relances-tous.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "points-de-vente",
+      "file": "img/personas/resp_ventes/11-points-de-vente.png",
+      "url": "http://localhost:3002/points-de-vente"
+    },
+    {
+      "slug": "points-de-vente-detail",
+      "file": "img/personas/resp_ventes/12-points-de-vente-detail.png",
+      "url": "http://localhost:3002/points-de-vente/pdv-gen-308"
+    },
+    {
+      "slug": "prospection-territoires",
+      "file": "img/personas/resp_ventes/13-prospection-territoires.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-carnet",
+      "file": "img/personas/resp_ventes/14-prospection-carnet.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-survie",
+      "file": "img/personas/resp_ventes/15-prospection-survie.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "prospection-passation",
+      "file": "img/personas/resp_ventes/16-prospection-passation.png",
+      "url": "http://localhost:3002/prospection"
+    },
+    {
+      "slug": "commercial-terrain",
+      "file": "img/personas/resp_ventes/17-commercial-terrain.png",
+      "url": "http://localhost:3002/commercial"
+    },
+    {
+      "slug": "objectifs",
+      "file": "img/personas/resp_ventes/18-objectifs.png",
+      "url": "http://localhost:3002/objectifs"
+    },
+    {
+      "slug": "equipe-classement",
+      "file": "img/personas/resp_ventes/19-equipe-classement.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-comparatif",
+      "file": "img/personas/resp_ventes/20-equipe-comparatif.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-coaching",
+      "file": "img/personas/resp_ventes/21-equipe-coaching.png",
+      "url": "http://localhost:3002/equipe"
+    }
+  ],
+  "SUPERVISEUR": [
+    {
+      "slug": "dashboard",
+      "file": "img/personas/superviseur/01-dashboard.png",
+      "url": "http://localhost:3002/dashboard"
+    },
+    {
+      "slug": "tournees",
+      "file": "img/personas/superviseur/02-tournees.png",
+      "url": "http://localhost:3002/tournees"
+    },
+    {
+      "slug": "commandes",
+      "file": "img/personas/superviseur/03-commandes.png",
+      "url": "http://localhost:3002/commandes"
+    },
+    {
+      "slug": "stock-stock",
+      "file": "img/personas/superviseur/04-stock-stock.png",
+      "url": "http://localhost:3002/stock?tab=stock"
+    },
+    {
+      "slug": "stock-sorties",
+      "file": "img/personas/superviseur/05-stock-sorties.png",
+      "url": "http://localhost:3002/stock?tab=sorties"
+    },
+    {
+      "slug": "stock-catalogue",
+      "file": "img/personas/superviseur/06-stock-catalogue.png",
+      "url": "http://localhost:3002/stock?tab=catalogue"
+    },
+    {
+      "slug": "relances-impayes",
+      "file": "img/personas/superviseur/07-relances-impayes.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-reappro",
+      "file": "img/personas/superviseur/08-relances-reappro.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-prospection",
+      "file": "img/personas/superviseur/09-relances-prospection.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "relances-tous",
+      "file": "img/personas/superviseur/10-relances-tous.png",
+      "url": "http://localhost:3002/relances"
+    },
+    {
+      "slug": "points-de-vente",
+      "file": "img/personas/superviseur/11-points-de-vente.png",
+      "url": "http://localhost:3002/points-de-vente"
+    },
+    {
+      "slug": "points-de-vente-detail",
+      "file": "img/personas/superviseur/12-points-de-vente-detail.png",
+      "url": "http://localhost:3002/points-de-vente/pdv-gen-124"
+    },
+    {
+      "slug": "commercial-terrain",
+      "file": "img/personas/superviseur/13-commercial-terrain.png",
+      "url": "http://localhost:3002/commercial"
+    },
+    {
+      "slug": "equipe-classement",
+      "file": "img/personas/superviseur/14-equipe-classement.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-comparatif",
+      "file": "img/personas/superviseur/15-equipe-comparatif.png",
+      "url": "http://localhost:3002/equipe"
+    },
+    {
+      "slug": "equipe-coaching",
+      "file": "img/personas/superviseur/16-equipe-coaching.png",
+      "url": "http://localhost:3002/equipe"
+    }
+  ]
+}
