@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 const PUBLIC_PATHS = ['/login', '/mot-de-passe-oublie']
+const DIST_PUBLIC_PATHS = ['/distributeur/login']
 
 /** URL de base respectant le host ngrok (X-Forwarded-*) */
 function requestOrigin(request: NextRequest): string {
@@ -13,11 +14,33 @@ function requestOrigin(request: NextRequest): string {
   return `${proto}://${host}`
 }
 
-export function middleware(request: NextRequest) {
+function distributeurMiddleware(request: NextRequest, origin: string) {
+  const { pathname } = request.nextUrl
+  const authCookie = request.cookies.get('prospera_dist_auth')
+  const isPublic = DIST_PUBLIC_PATHS.some(p => pathname.startsWith(p))
+  const isAuthenticated = !!authCookie?.value
+
+  if (!isAuthenticated && !isPublic && pathname !== '/distributeur') {
+    const loginUrl = request.nextUrl.clone()
+    loginUrl.pathname = '/distributeur/login'
+    loginUrl.search = ''
+    loginUrl.searchParams.set('redirect', pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  if (isAuthenticated && isPublic) {
+    const dashboardUrl = request.nextUrl.clone()
+    dashboardUrl.pathname = '/distributeur/dashboard'
+    dashboardUrl.search = ''
+    return NextResponse.redirect(dashboardUrl)
+  }
+
+  return NextResponse.next()
+}
+
+function imfMiddleware(request: NextRequest, origin: string) {
   const { pathname } = request.nextUrl
   const authCookie = request.cookies.get('prospera_auth')
-  const origin = requestOrigin(request)
-
   const isPublic = PUBLIC_PATHS.some(p => pathname.startsWith(p))
   const isAuthenticated = !!authCookie?.value
 
@@ -34,6 +57,16 @@ export function middleware(request: NextRequest) {
   }
 
   return NextResponse.next()
+}
+
+export function middleware(request: NextRequest) {
+  const origin = requestOrigin(request)
+
+  if (request.nextUrl.pathname.startsWith('/distributeur')) {
+    return distributeurMiddleware(request, origin)
+  }
+
+  return imfMiddleware(request, origin)
 }
 
 export const config = {
